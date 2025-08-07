@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Results</h2>
+        <p><strong>Extracted or Manually Inputted Text:</strong> {{ extracted_text }}</p>
+        <p><strong>Text Classification Result:</strong> {{ text_classification_result }}</p>
+        <p><strong>Signature Verification Result:</strong> {{ signature_result }}</p>
+        <p><strong>Final Result:</strong> {{ final_result }}</p>
+
+        {% if file1_url %}
+        <div class="mt-4">
+            <h4>First Signature Image:</h4>
+            <img src="{{ file1_url }}" alt="First Signature" class="img-fluid">
+        </div>
+        {% endif %}
+
+        {% if file2_url %}
+        <div class="mt-4">
+            <h4>Second Signature Image:</h4>
+            <img src="{{ file2_url }}" alt="Second Signature" class="img-fluid">
+        </div>
+        {% endif %}
+
+        <a href="/" class="btn btn-primary mt-4">Start Over</a>
+    </div>
+</body>
+</html>

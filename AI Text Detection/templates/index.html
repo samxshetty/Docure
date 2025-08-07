@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Classifier</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>    
+    <div class="banner">
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="{{ url_for('about') }}" id="aboutLink">About</a></li>
+            </ul>
+    </div>
+   
+    <div class="content">
+        <h1>AI Text Classifier</h1>
+        <br>
+        <div class="upload-container">
+    <form action="/" method="post">
+        <label for="input_text">Input Text :</label>
+        <textarea id="input_text" name="input_text" rows="4" cols="50" required></textarea>
+        <br>
+        <button type="submit" id="detectButton"><span></span> DETECT </button>
+    </form>
+</body>
+</html>
+
+
+

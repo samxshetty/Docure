@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Classification Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="{{ url_for('about') }}" id="aboutLink">About</a></li>
+            </ul>
+    </div>
+    <div class="content">
+        <h1>Classification Result</h1>
+        
+        {% if predicted_label == 1 %}
+            <div class="message-box AI">
+                <p style="color: rgb(233, 61, 61);">The input text is AI-generated.</p>
+            </div>
+        {% else %}
+            <div class="message-box Not_AI">
+                <p style="color: rgb(21, 126, 21);">The input text is not AI-generated.</p>
+            </div>
+        {% endif %}
+    </div>
+    
+    
+</body>
+</html>

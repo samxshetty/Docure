@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Matching</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Canva+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet" href="static/style.css">
+    
+</head>
+<body>
+    <div id="frm">
+        <h1>Signature Matching Tool</h1>
+        <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file1">Upload Signature 1:</label>
+                <input type="file" id="file1" name="file1" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="file2">Upload Signature 2:</label>
+                <input type="file" id="file2" name="file2" accept="image/*" required>
+            </div>
+            <button type="submit">Compare Signatures</button>
+        </form>
+    </div>
+</body>
+</html>

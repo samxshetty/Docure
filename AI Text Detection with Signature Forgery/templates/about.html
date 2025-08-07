@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .modal-dialog {
+            max-width: 400px; /* Set the maximum width of the modal */
+            margin: 1.75rem auto; /* Center the modal */
+        }
+        .modal-content img {
+            width: 100%; /* Ensure the image fills the modal */
+        }
+        .banner {
+            width: 100%;
+            background: #f8f9fa;
+            padding: 20px 0;
+        }
+        .navbar {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #343a40;
+            padding: 10px 0;
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .navbar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .navbar ul li a:hover {
+            color: #009688;
+        }
+        .logo {
+            width: 120px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content h1 {
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="{{ url_for('static', filename='WETech (2).png') }}" class="logo" alt="Logo">
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="content">
+        <h1>About Us</h1>
+        <p>Innovix is a startup company built by three ambitious minds working hard to tackle the ongoing problem of
+           people getting scammed by AI-generated texts and documents.<br>
+           We at Innovix have built an app to tackle this exact problem. Docure is the future of saving humanity from AI.
+        </p>
+    </div>
+</body>
+</html>
